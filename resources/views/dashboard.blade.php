@@ -8,18 +8,15 @@
 		<div class="col-md-4">
 			<div class="card">
 				<div class="card-header">
-					<h5>Statistics</h5>
+					<h5>Quick Links</h5>
 				</div>
-				<div class="card-body text-center">
-					</h5>
-					@if(isset($getCount) && $getCount < 1)
-						<h5> There is no entry in your SmartDiary</h5>
-						<a href="/entries/create">Create New Entry</a>
-					@elseif (isset($getCount) && $getCount == 1)
-						<h5>There is 1 entry in your SmartDiary</h5>
-					@else
-						<h5>There are <br> <span class="text-info">{{$getCount}} entries </span> <br> in your SmartDiary</h5>
-					@endif
+				<div class="card-body">
+					<h5 class="text-success">Total Entries: @if(isset($getCount)) {{ $getCount }} @endif</h5>
+					<hr>
+					<p>&raquo; <a href="/entries/create"> Add New Entry</a></p>
+					<p>&raquo; <a href="/profiles"> Update Profile</a></p>
+
+
 				</div>
 			</div>
 		</div>
